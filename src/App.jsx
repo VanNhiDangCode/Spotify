@@ -1,9 +1,11 @@
-import Header_Index from './Component/Header_Index'
-import Body_Index from './Component/Body_Index'
+import Header_Index from './components/Navbar'
+import Body_Index from './components/Body_Index'
+import Navbar from './components/Navbar'
 function App() {
   return (
     <>
-     <Header_Index/>
+      <Navbar/>
+    
      <Body_Index/>
     </>
   )

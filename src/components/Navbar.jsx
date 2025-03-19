@@ -2,12 +2,12 @@ import { FaSearch } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import { ImSpotify } from "react-icons/im";
 import { IoMdNotifications } from "react-icons/io";
-function Header_Index () {
+function Navbar () {
  
    return (
     <>
     <div  >
-   <div className="bg-black flex  justify-between p-2 items-center " >
+   <div className="bg-black flex fixed w-full   justify-between p-2 items-center " >
 
       <div className="pl-3" >
       <ImSpotify className="text-white w-9 h-9"  />
@@ -37,4 +37,4 @@ function Header_Index () {
    );
 
 }
-export default Header_Index
+export default Navbar
