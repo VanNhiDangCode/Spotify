@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Ẩn scrollbar trên Chrome, Safari */
+::-webkit-scrollbar {
+    width: 15px;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+  
+  /* Ẩn scrollbar mặc định trên Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #555 transparent;
+  }
+  

@@ -10,11 +10,18 @@ function Sidebar () {
 return (
 
     <>
-     <div className="w-1/3 ml-1  bg-[#121212] rounded-lg pt-16 h-screen "  >
-      <div className="flex justify-between p-3  " >
-      <RiFileList3Fill className="text-white w-9 h-9 " />
+     <div className="w-1/3 p-2  bg-[#121212] rounded-xl mt-16 max-h-[90%] box-border "  >
+      <div className="flex items-center justify-between p-3  " >
+      <div className="text-white items-center flex" >
+      <RiFileList3Fill className="text-white w-9 h-9 "  />
+      <h2 className="pl-2" >Thư Viện</h2>
+      </div>
+      
      <div className="flex" >
-     <IoMdAdd className="text-white w-8 h-8" />
+     <div className="flex text-white items-center bg-white/5 rounded-full px-3 ">
+     <IoMdAdd className=" w-8 h-8 pr-2 " />
+     <h2>Tạo</h2>
+     </div>
      <FaArrowRight className="text-white w-8 h-8 pl-3 "  />
      </div>
       </div>
