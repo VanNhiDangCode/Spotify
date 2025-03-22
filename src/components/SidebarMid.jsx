@@ -12,10 +12,13 @@ import Body_Mid_Body from "./Body_Mid_Body";
 import { MdOutlineAddCircleOutline } from "react-icons/md";
 import Sidebar from "./Sidebar";
 import SidebarRight from "./SidebarRight";
-function SidebarMid (){
+function SidebarMid ({isSidebarVisible }){
     return (
 <>
-<div className=" pl-4  w-3/4  rounded-xl   overflow-y-auto h-screen   pt-16 " >
+<div className={`pl-4 rounded-xl overflow-y-auto h-screen pt-16 ${
+    isSidebarVisible ? "w-3/4" : "w-5/6"
+}`}>
+
     <div className="   rounded-xl bg-gradient-to-b from-[#1f2937] to-black py-4 pt-6 px-10 overflow-y-auto  " >
     <div  >
   <button className="bg-white/10 text-white px-3 py-1 rounded-full" >Tất Cả</button>

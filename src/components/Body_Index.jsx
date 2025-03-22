@@ -1,33 +1,23 @@
-import { RiFileList3Fill } from "react-icons/ri";
-import { IoMdAdd } from "react-icons/io";
-import { FaArrowRight } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
-import { FaListUl } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
-import { RiPushpinFill } from "react-icons/ri";
-import { BsSave2Fill } from "react-icons/bs";
-import { BsThreeDots } from "react-icons/bs";
-import { IoMdClose } from "react-icons/io";
-import Body_Mid_Body from "./Body_Mid_Body";
-import { MdOutlineAddCircleOutline } from "react-icons/md";
+import { useState } from "react";
 import Sidebar from "./Sidebar";
-import SidebarRight from "./SidebarRight";
 import SidebarMid from "./SidebarMid";
-function Body_Index () {
-return (
-    <>
-    <div className="bg-black w-full flex  overflow-auto   " >
-{/* body-Left */}
-    <Sidebar/> 
-    
-{/* body-mid */}
-    <SidebarMid/>
-{/* body-right */}
-   <SidebarRight/>
+import SidebarRight from "./SidebarRight";
 
-    </div>
-    </>
-);
+function Body_Index() {
+    const [isSidebarVisible, setIsSidebarVisible] = useState(true);
 
+    return (
+        <div className="bg-black w-full flex overflow-auto">
+            {/* Sidebar Left */}
+            <Sidebar isSidebarVisible={isSidebarVisible} />
+
+            {/* Sidebar Mid - Truyền trạng thái để điều chỉnh kích thước */}
+            <SidebarMid isSidebarVisible={isSidebarVisible} />
+
+            {/* Sidebar Right (chỉ hiển thị nếu isSidebarVisible là true) */}
+            {isSidebarVisible && <SidebarRight setIsSidebarVisible={setIsSidebarVisible} />}
+        </div>
+    );
 }
-export default Body_Index
+
+export default Body_Index;
